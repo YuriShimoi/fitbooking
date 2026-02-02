@@ -126,7 +126,7 @@ function BookPage() {
               <Input type="date" name="dt_publication" defaultValue={formatDateToInput(book.dt_publication)} onChange={ checkFormValidation } />
             </div>
             <div>
-              <Input type="file" name="cover" placeholder="Escolher Imagem" defaultValue={book?.cover || null} style={{ height: "226px" }} />
+              <Input type="image" name="cover" placeholder="Escolher Imagem" defaultValue={book?.cover || null} style={{ height: "226px" }} />
             </div>
             <div className="form-double-container" style={{height: "200px"}}>
               <Input

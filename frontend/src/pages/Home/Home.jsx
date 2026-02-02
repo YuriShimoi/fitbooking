@@ -78,7 +78,7 @@ function HomePage() {
               <Input type="date" name="dt_publication" onChange={ checkFormValidation } />
             </div>
             <div>
-              <Input type="file" name="cover" placeholder="Escolher Imagem" style={{ height: "226px" }} />
+              <Input type="image" name="cover" placeholder="Escolher Imagem" style={{ height: "226px" }} />
             </div>
             <div className="form-double-container" style={{height: "200px"}}>
               <Input type="textarea" name="description" placeholder="Descrição" maxLength={2000} style={{ height: "200px" }} onChange={ checkFormValidation } />

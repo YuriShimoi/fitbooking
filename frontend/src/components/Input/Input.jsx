@@ -28,7 +28,7 @@ function Input({ type, name, defaultValue, placeholder, icon, style, maxLength=9
           <textarea name={name} placeholder={placeholder} maxLength={maxLength} onChange={ev => onChange(ev.target.value)} defaultValue={defaultValue}></textarea>
         </div>
       );
-    case 'file':
+    case 'image':
       console.log('render?');
       return (
         <div className="custom-input custom-input-file" style={style}>
@@ -39,7 +39,7 @@ function Input({ type, name, defaultValue, placeholder, icon, style, maxLength=9
           >
             {!fileLabel && <span>{placeholder}</span>}
           </label>
-          <input id="file-input" name={name} type="file" onChange={ev => {updatePreview(ev.target); onChange(ev.target.files[0])}} />
+          <input id="file-input" name={name} type="file" accept="image/*" onChange={ev => {updatePreview(ev.target); onChange(ev.target.files[0])}} />
         </div>
       );
     case 'date':
