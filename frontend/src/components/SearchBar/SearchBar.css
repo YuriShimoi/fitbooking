@@ -1,0 +1,21 @@
+#search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--card);
+  height: 44px;
+  padding: 5px 17px;
+  border-radius: 12px;
+}
+
+#search-bar > input {
+  border: none;
+  font-size: 18px;
+  padding: 0;
+  height: inherit;
+  flex-grow: 1;
+}
+#search-bar > input::placeholder {
+  color: var(--input-placeholder);
+}

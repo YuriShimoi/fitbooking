@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter_28pt-SemiBold.ttf') format('woff');
+}
+
+:root {
+  --card:  #ffffff;
+  --on-card:  #222222;
+  --on-card-highlight:  #111111;
+  --image-container:  #e0e0e2;
+  --page:  #f0f0f0;
+  --on-page:  #111111;
+  --input-placeholder:  #444444;
+  --primary:  #0093e6;
+  --on-primary:  #ffffff;
+  --gray:  #d5d5d5;
+  --on-gray:  #202020;
+  --error: #AD0000;
+  --on-error: #ffffff;
+
+  font-family: Inter, system-ui, sans-serif, Arial;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--on-page);
+  background-color: var(--page);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+nav {
+  height: 48px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+  font-size: 16px;
+  color: var(--on-card);
+  background: var(--card);
+}
+
+textarea {
+  font-family: inherit;
+}

@@ -1,0 +1,47 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+nav > button {
+  background: inherit;
+  color: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+}
+nav > button:hover {
+  border-color: transparent;
+}
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn {
+  background: var(--gray);
+  min-width: 228px;
+  height: 59px;
+  padding: 20px 40px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: var(--on-gray);
+  line-height: 16px;
+  font-weight: 500;
+}
+.btn:disabled {
+  opacity: 50%;
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.btn-error {
+  background: var(--error);
+  color: var(--on-error);
+}
