@@ -32,4 +32,6 @@ Inside _backend_ run `npx prisma migrate dev --name init`
 ### Running
 In the _root_ folder run `npm run dev`
 
-Access `localhost:8080`
+Access `localhost:8080` for the site webpage.
+
+You can also access `http://localhost:5000/swagger/` to check the API documentation.
