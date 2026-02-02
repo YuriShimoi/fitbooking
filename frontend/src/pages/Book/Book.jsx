@@ -110,7 +110,7 @@ function BookPage() {
             <span>Por {book.author}</span>
             <span>Publicado em {formatDate(book.dt_publication)}</span>
           </div>
-          <p>{book.description}</p>
+          <p className="book-long-description">{book.description}</p>
         </div>
         <div className="book-cover-container">
           <img src={ book.cover || "/src/assets/default-cover.png" } alt="book cover" />
@@ -118,11 +118,11 @@ function BookPage() {
       </div>
 
       {updateModalIsVisible && (
-        <FloatModal title="Novo livro">
+        <FloatModal title="Editar livro">
           <form id="new-book-form" ref={formRef} onSubmit={tryUpdateBook}>
             <div className="form-left-container">
-              <Input type="text" name="title" placeholder="Título" defaultValue={book.title} onChange={ checkFormValidation } />
-              <Input type="text" name="author" placeholder="Autor" defaultValue={book.author} onChange={ checkFormValidation } />
+              <Input type="text" name="title" placeholder="Título" defaultValue={book.title} maxLength={100} onChange={ checkFormValidation } />
+              <Input type="text" name="author" placeholder="Autor" defaultValue={book.author} maxLength={50} onChange={ checkFormValidation } />
               <Input type="date" name="dt_publication" defaultValue={formatDateToInput(book.dt_publication)} onChange={ checkFormValidation } />
             </div>
             <div>
@@ -133,6 +133,7 @@ function BookPage() {
                 type="textarea"
                 name="description"
                 placeholder="Descrição"
+                maxLength={2000}
                 defaultValue={book.description}
                 style={{ height: "200px" }} />
             </div>
@@ -146,7 +147,7 @@ function BookPage() {
 
       {deleteModalIsVisible && (
         <FloatModal title="Tem certeza?">
-          <p className="delete-subtext">Ao excluir este livro não será possível recupera-lo. Realmente deseja excluí-lo?</p>
+          <p className="delete-subtext">Ao excluir este livro não será possível recuperá-lo. Realmente deseja excluí-lo?</p>
           <div className="btn-group">
             <button className="btn" onClick={() => setDeleteModalIsVisible(false)}>Cancelar</button>
             <button className="btn btn-error" onClick={() => tryDeleteBook()}>Excluir</button>

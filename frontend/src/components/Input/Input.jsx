@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Input.css';
 
-function Input({ type, name, defaultValue, placeholder, icon, style, onChange=() => {} }) {
+function Input({ type, name, defaultValue, placeholder, icon, style, maxLength=9999, onChange=() => {} }) {
   const [fileLabel, setFileLabel] = useState(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Input({ type, name, defaultValue, placeholder, icon, style, onChange=()
     case 'textarea':
       return (
         <div className="custom-input custom-input-textarea" style={style}>
-          <textarea name={name} placeholder={placeholder} onChange={ev => onChange(ev.target.value)} defaultValue={defaultValue}></textarea>
+          <textarea name={name} placeholder={placeholder} maxLength={maxLength} onChange={ev => onChange(ev.target.value)} defaultValue={defaultValue}></textarea>
         </div>
       );
     case 'file':
@@ -50,7 +50,7 @@ function Input({ type, name, defaultValue, placeholder, icon, style, onChange=()
 
   return (
     <div className="custom-input" style={style}>
-      <input name={name} type={type} defaultValue={defaultValue} placeholder={placeholder} onChange={ev => onChange(ev.target.value)} />
+      <input name={name} type={type} defaultValue={defaultValue} placeholder={placeholder} maxLength={maxLength} onChange={ev => onChange(ev.target.value)} />
       {icon}
     </div>
   );

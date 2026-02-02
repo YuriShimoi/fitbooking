@@ -73,15 +73,15 @@ function HomePage() {
         <FloatModal title="Novo livro">
           <form id="new-book-form" ref={formRef} onSubmit={tryRegisterBook}>
             <div className="form-left-container">
-              <Input type="text" name="title" placeholder="Título" onChange={ checkFormValidation } />
-              <Input type="text" name="author" placeholder="Autor" onChange={ checkFormValidation } />
+              <Input type="text" name="title" placeholder="Título" maxLength={100} onChange={ checkFormValidation } />
+              <Input type="text" name="author" placeholder="Autor" maxLength={50} onChange={ checkFormValidation } />
               <Input type="date" name="dt_publication" onChange={ checkFormValidation } />
             </div>
             <div>
               <Input type="file" name="cover" placeholder="Escolher Imagem" style={{ height: "226px" }} />
             </div>
             <div className="form-double-container" style={{height: "200px"}}>
-              <Input type="textarea" name="description" placeholder="Descrição" style={{ height: "200px" }} onChange={ checkFormValidation } />
+              <Input type="textarea" name="description" placeholder="Descrição" maxLength={2000} style={{ height: "200px" }} onChange={ checkFormValidation } />
             </div>
             <div className="form-double-container form-centered-container">
               <button className="btn" onClick={() => setCreateModalIsVisible(false)}>Cancelar</button>

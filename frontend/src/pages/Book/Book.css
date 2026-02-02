@@ -21,6 +21,10 @@ nav button {
   margin-top: 40px;
 }
 
+.book-info-container {
+  max-width: 560px;
+}
+
 .book-info-container h1 {
   margin: 0 0 32px 0;
   font-size: 40px;
@@ -40,6 +44,12 @@ nav button {
   color: var(--on-card-highlight);
   margin: 32px 0 0 0;
   text-align: justify;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.book-long-description {
+  color: var(--on-card-highlight);
 }
 
 .book-cover-container img {
@@ -57,6 +67,6 @@ nav button {
 
 @media (max-width: 800px) {
   .book-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
   }
 }
