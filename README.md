@@ -28,13 +28,15 @@ DATABASE_URL="mysql://root:rootpassword@localhost:3306/fitdatabase"
 
 Inside _backend_ run `npx prisma migrate dev --name init`
 
-
 ### Running
 In the _root_ folder run `npm run dev`
 
 Access `localhost:8080` for the site webpage.
 
 You can also access `http://localhost:5000/swagger/` to check the API documentation.
+
+### Testing
+You can run automatic unit testing for the backend going to _backend_ folder and running `npm test`.
 
 # Pages in the system
 ### Swagger page for API testing
