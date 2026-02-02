@@ -1,11 +1,11 @@
-# Fit tech dev test program
+# Fit techical test fullstack system
 
 ### Necessary tools
  - [nodejs LTS](https://nodejs.org/en)
  - [MySQL Community Server 8.0.44 ](https://downloads.mysql.com/archives/installer/)
 
 ### Installment
-Open MySQL 8.0 Command Lone Client or run `mysql -u root -p` in terminal, login in the mysql and then run:
+Open MySQL 8.0 Command Line Client or run `mysql -u root -p` in terminal, login in the mysql and then run:
 ```SQL
 CREATE DATABASE fitdatabase;
 ```
@@ -28,6 +28,8 @@ DATABASE_URL="mysql://root:rootpassword@localhost:3306/fitdatabase"
 
 Inside _backend_ run `npx prisma migrate dev --name init`
 
+
+### Running
 In the _root_ folder run `npm run dev`
 
-DONE! Access `localhost:8080`
+Access `localhost:8080`
