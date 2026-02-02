@@ -92,7 +92,7 @@ function BookPage() {
   return (
     <>
       <nav>
-        <button className="btn-back" onClick={() => navigate(-1)}>
+        <button className="btn-back" onClick={() => navigate('/')}>
           <img className="svg-icon" src="/src/assets/icons/arrow.svg" alt="search-icon" />
           Voltar
         </button>
