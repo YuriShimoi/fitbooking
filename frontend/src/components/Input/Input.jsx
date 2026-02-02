@@ -29,7 +29,6 @@ function Input({ type, name, defaultValue, placeholder, icon, style, maxLength=9
         </div>
       );
     case 'image':
-      console.log('render?');
       return (
         <div className="custom-input custom-input-file" style={style}>
           <label 

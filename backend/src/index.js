@@ -56,7 +56,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`Database: ${process.env.DB_NAME}`);
   console.log(`API available at http://localhost:${PORT}/api/books`);
 });
