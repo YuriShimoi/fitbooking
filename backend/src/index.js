@@ -1,4 +1,6 @@
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
 const cors = require('cors');
 require('dotenv').config();
 const { testConnection } = require('./config/database');
@@ -7,6 +9,10 @@ const app = express();
 app.use(cors());
 
 testConnection();
+
+const PORT = process.env.PORT || 5000;
+
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('/', (req, res) => {
   res.json({ 
@@ -48,8 +54,6 @@ app.use((req, res) => {
     }
   });
 });
-
-const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
